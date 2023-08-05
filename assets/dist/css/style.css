@@ -1,0 +1,624 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  scroll-behavior: smooth;
+  --bs-font:"Heebo", sans-serif;
+  --bs-primary:#F4405F;
+  --bs-background:#fcfafa;
+  --bs-black-100:#0F0E0E;
+  --bs-black-75:#0F0E0EC9;
+  --bs-black-25:#0F0E0E40;
+  --bs-black-5:#F3F3F3;
+}
+
+Body {
+  padding-top: 5rem;
+  margin: 0;
+  height: auto;
+  background-color: var(--bs-background);
+  font-family: var(--bs-font);
+}
+Body .card {
+  background-color: transparent;
+}
+
+nav {
+  background-color: var(--bs-background);
+  height: 6rem;
+  border-bottom: 1px solid var(--bs-black-25);
+}
+nav a {
+  text-decoration: none;
+  color: var(--bs-black-100);
+  margin-right: 1rem;
+}
+nav a span {
+  padding-left: 0.5rem;
+  font-weight: 900;
+  color: var(--bs-primary);
+}
+nav a:hover {
+  color: var(--bs-primary);
+}
+nav .sec {
+  margin-right: 2rem;
+}
+nav .link {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+nav .link a {
+  margin-right: 2rem;
+}
+
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-radius: 8rem;
+  border: 0px;
+  box-shadow: 8px 8px 24px 0px rgba(244, 64, 95, 0.65);
+  font-size: 1rem;
+  padding: 1rem 2rem;
+}
+.btn-primary:hover {
+  background-color: var(--bs-primary);
+  border: 0px;
+  box-shadow: 8px 8px 36px 0px rgba(244, 64, 95, 0.95);
+}
+.btn-primary:active, .btn-primary:focus {
+  background-color: var(--bs-primary);
+  outline: 2px whitesmoke;
+  box-shadow: 8px 8px 36px 0px rgba(244, 64, 95, 0.95);
+}
+
+.btn-secondary {
+  background-color: rgba(244, 64, 95, 0.3333333333);
+  border-radius: 8rem;
+  border: 0px;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  color: var(--bs-primary);
+}
+.btn-secondary:hover {
+  background-color: var(--bs-primary);
+  border: 0px;
+  box-shadow: 8px 8px 36px 0px rgba(244, 64, 95, 0.95);
+}
+.btn-secondary:active, .btn-secondary:focus {
+  background-color: var(--bs-primary);
+  outline: 2px whitesmoke;
+  box-shadow: 8px 8px 36px 0px rgba(244, 64, 95, 0.95);
+}
+
+section {
+  padding: 2rem 0rem;
+}
+section .section-title {
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+section .section-action {
+  padding-top: 2rem;
+  text-align: end;
+}
+
+.hero .img-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 3rem;
+}
+.hero .img-col .hero-image {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+.hero .img-col .hero-shadow {
+  box-shadow: 1.5rem 2.5rem 3rem rgba(0, 0, 0, 0.5) !important;
+  border-radius: 10%;
+}
+.hero .text-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.hero .text-col h1 {
+  font-weight: 900;
+  line-height: 110%;
+}
+.hero .text-col h1 span {
+  color: var(--bs-primary);
+}
+.hero .text-col p {
+  margin-bottom: 1.5rem;
+}
+
+.benefits .benefit-card {
+  border: 0;
+}
+.benefits .benefit-card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 0rem;
+  margin-bottom: 1rem;
+  background-color: var(--bs-background);
+}
+.benefits .benefit-card .b-icon {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 2rem;
+  border-color: gray;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--bs-primary);
+}
+.benefits .benefit-card .card-title {
+  font-size: medium;
+  font-weight: 800;
+  color: var(--bs-black-100);
+}
+.benefits .benefit-card .card-text {
+  font-size: small;
+  opacity: 0.7;
+}
+.benefits .benefit-card:hover .b-icon, .benefits .benefit-card.active .b-icon {
+  background-color: rgba(244, 64, 95, 0.1568627451);
+}
+.benefits .benefit-card:hover .card-title, .benefits .benefit-card.active .card-title {
+  color: var(--bs-primary);
+}
+
+.how .how-card {
+  border: 0;
+}
+.how .how-card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--bs-black-5);
+}
+.how .how-card .b-icon {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 2rem;
+  border-color: gray;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--bs-primary);
+}
+.how .how-card .card-title {
+  font-size: medium;
+  font-weight: 800;
+  color: var(--bs-black-100);
+}
+.how .how-card .card-text {
+  font-size: small;
+  opacity: 0.7;
+}
+.how .how-card:hover .b-icon, .how .how-card.active .b-icon {
+  background-color: rgba(244, 64, 95, 0.1568627451);
+}
+.how .how-card:hover .card-title, .how .how-card.active .card-title {
+  color: var(--bs-primary);
+}
+
+.industry .section-title {
+  margin-bottom: 0.5rem;
+}
+.industry .lead {
+  margin-bottom: 2rem;
+}
+.industry .industry-card {
+  min-height: 16rem;
+  border: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+.industry .industry-card img {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+  background-color: var(--bs-primary);
+}
+.industry .industry-card .card-img-overlay {
+  transition: background-color 0.5s ease-out;
+  color: var(--bs-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.industry .industry-card:hover .card-img-overlay, .industry .industry-card.active .card-img-overlay {
+  background-color: rgba(244, 64, 95, 0.7019607843);
+}
+
+.why ul {
+  padding-left: 0rem;
+}
+.why ul li {
+  list-style: none;
+  align-items: center;
+  display: inline-flex;
+  margin-bottom: 0.5rem;
+}
+.why ul li i {
+  margin-right: 0.8rem;
+  font-size: 1.5rem;
+  color: var(--bs-primary);
+}
+.why ul li .why-card {
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.faqs .accordion-item {
+  background-color: #fff;
+  border: none;
+  margin-bottom: 0.5rem;
+}
+.faqs .accordion-body {
+  background-color: #f0f0f0;
+  padding: 0rem 1.25rem 1rem 1.25rem;
+}
+.faqs .accordion-button {
+  box-shadow: none;
+  border: none;
+}
+.faqs .accordion-button:not(.collapsed) {
+  color: var(--bs-primary);
+  background-color: #f0f0f0;
+}
+.faqs .accordion-button:focus {
+  z-index: 3;
+  border-color: none;
+  outline: 0;
+  box-shadow: none;
+}
+.faqs .accordion-button::after {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: auto;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.soon {
+  padding: 3rem 0rem;
+}
+.soon h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.soon h3 {
+  text-align: center;
+  font-weight: 900;
+  color: var(--bs-primary);
+}
+
+.footer .nav .nav-item .nav-link {
+  color: #6c757d;
+}
+.footer .nav .nav-item .nav-link:hover {
+  color: var(--bs-primary);
+}
+
+.modal-dialog .modal-content {
+  background-color: var(--bs-background);
+  padding: 1rem;
+  border-radius: 1.5rem;
+}
+.modal-dialog .modal-content .modal-header {
+  border-bottom: 0;
+}
+.modal-dialog .modal-content .modal-body .form-control {
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+}
+.modal-dialog .modal-content .modal-body .form-label, .modal-dialog .modal-content .modal-body .form-text {
+  padding-left: 1.5rem;
+}
+.modal-dialog .modal-content .modal-footer {
+  border: 0;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+  body {
+    padding-top: 6rem;
+  }
+  body nav {
+    height: 6rem;
+  }
+  body nav .link {
+    width: auto;
+  }
+  body .hero .img-col {
+    padding-top: 1rem;
+    padding-bottom: 3.5rem;
+  }
+  body .benefits .benefit-card .card-body {
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+  }
+  body .how .how-card .card-body {
+    padding: 2rem;
+    margin-bottom: 1.75rem;
+  }
+  body .industry .industry-card {
+    min-height: 12rem;
+  }
+  body .footer {
+    font-size: small;
+  }
+}
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 768px) {
+  body .lead {
+    font-size: large;
+  }
+  body .btn-primary, body .btn-secondary {
+    padding: 0.5rem 1rem;
+  }
+  body nav {
+    height: 5rem;
+  }
+  body nav .link {
+    width: auto;
+  }
+  body section {
+    padding: 2rem 0;
+  }
+  body section .section-title {
+    font-size: large;
+    margin-bottom: 2rem;
+  }
+  body section .section-action {
+    padding-top: 1rem;
+  }
+  body .hero .img-col {
+    padding-top: 1rem;
+    padding-bottom: 3.5rem;
+  }
+  body .benefits .benefit-card .card-body {
+    padding: 0rem;
+    margin-bottom: 1rem;
+  }
+  body .benefits .benefit-card .card-body .card-title {
+    font-size: medium;
+    margin-bottom: 0.5rem;
+  }
+  body .benefits .benefit-card .card-body .card-text {
+    font-size: small;
+  }
+  body .benefits .benefit-card .card-body .b-icon {
+    font-size: 1.25rem;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  body .how .how-card .card-body {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  body .how .how-card .card-body .card-title {
+    font-size: medium;
+    margin-bottom: 0.5rem;
+  }
+  body .how .how-card .card-body .card-text {
+    font-size: small;
+  }
+  body .how .how-card .card-body .b-icon {
+    font-size: 1.25rem;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  body .industry .lead {
+    margin-bottom: 1.25rem;
+  }
+  body .industry .industry-card {
+    min-height: 10rem;
+  }
+  body .soon {
+    padding: 1.5rem 0;
+  }
+  body .footer {
+    font-size: small;
+  }
+}
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 576px) {
+  body {
+    padding-top: 5rem;
+    font-size: medium;
+  }
+  body .lead {
+    font-size: medium;
+  }
+  body .btn-primary, body .btn-secondary {
+    font-size: medium;
+    padding: 0.5rem 1rem;
+  }
+  body nav {
+    height: 5rem;
+  }
+  body nav .link {
+    width: auto;
+  }
+  body nav a img {
+    height: 10%;
+  }
+  body section {
+    padding: 1.5rem 0;
+  }
+  body section .section-title {
+    font-size: large;
+    margin-bottom: 1.5rem;
+  }
+  body section .section-action {
+    padding-top: 0.5rem;
+  }
+  body .hero .img-col {
+    padding-top: 1rem;
+    padding-bottom: 3.5rem;
+  }
+  body .benefits .benefit-card .card-body {
+    padding: 0rem;
+    margin-bottom: 1rem;
+  }
+  body .benefits .benefit-card .card-body .card-title {
+    font-size: medium;
+    margin-bottom: 0.5rem;
+  }
+  body .benefits .benefit-card .card-body .card-text {
+    font-size: small;
+  }
+  body .benefits .benefit-card .card-body .b-icon {
+    font-size: 1rem;
+    width: 3rem;
+    height: 3rem;
+  }
+  body .how .how-card .card-body {
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  body .how .how-card .card-body .card-title {
+    font-size: medium;
+    margin-bottom: 0.5rem;
+  }
+  body .how .how-card .card-body .card-text {
+    font-size: small;
+  }
+  body .how .how-card .card-body .b-icon {
+    font-size: 1rem;
+    width: 3rem;
+    height: 3rem;
+  }
+  body .industry .lead {
+    margin-bottom: 1.25rem;
+  }
+  body .industry .industry-card {
+    min-height: 10rem;
+  }
+  body .soon {
+    padding: 1.5rem 0;
+  }
+  body .footer {
+    font-size: small;
+  }
+}
+@media screen and (max-width: 390px) {
+  body {
+    padding-top: 7rem;
+    font-size: small;
+  }
+  body .lead {
+    font-size: small;
+  }
+  body .card-title {
+    font-size: small;
+  }
+  body .card-text {
+    font-size: small;
+  }
+  body .btn-primary, body .btn-secondary {
+    font-size: small;
+    padding: 0.5rem 1rem;
+  }
+  body nav {
+    height: 7rem;
+  }
+  body nav .link {
+    width: 100%;
+    justify-content: space-between;
+  }
+  body nav a {
+    margin-right: auto;
+  }
+  body nav a img {
+    height: 10%;
+  }
+  body section {
+    padding: 1rem 0;
+  }
+  body section .section-title {
+    font-size: large;
+    margin-bottom: 1.5rem;
+  }
+  body section .section-action {
+    padding-top: 0.5rem;
+  }
+  body .hero .img-col {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+  }
+  body .benefits .benefit-card .card-body {
+    padding: 0rem;
+    margin-bottom: 1rem;
+  }
+  body .benefits .benefit-card .card-body .card-title {
+    font-size: small;
+    margin-bottom: 0.5rem;
+  }
+  body .benefits .benefit-card .card-body .card-text {
+    font-size: smaller;
+  }
+  body .benefits .benefit-card .card-body .b-icon {
+    font-size: 1rem;
+    width: 3rem;
+    height: 3rem;
+  }
+  body .how .how-card .card-body {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  body .how .how-card .card-body .card-title {
+    font-size: small;
+    margin-bottom: 0.5rem;
+  }
+  body .how .how-card .card-body .card-text {
+    font-size: smaller;
+  }
+  body .how .how-card .card-body .b-icon {
+    font-size: 1rem;
+    width: 3rem;
+    height: 3rem;
+  }
+  body .industry .lead {
+    margin-bottom: 1rem;
+  }
+  body .industry .industry-card {
+    min-height: 8rem;
+  }
+  body .soon {
+    padding: 1.5rem 0;
+  }
+  body .footer {
+    font-size: small;
+  }
+}/*# sourceMappingURL=style.css.map */
