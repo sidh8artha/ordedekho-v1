@@ -7,6 +7,7 @@
   scroll-behavior: smooth;
   --bs-font:"Heebo", sans-serif;
   --bs-primary:#F4405F;
+  --bs-primary-75:#F4405F40;
   --bs-background:#fcfafa;
   --bs-black-100:#0F0E0E;
   --bs-black-75:#0F0E0EC9;
@@ -147,9 +148,11 @@ section .section-action {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 1rem 0rem;
-  margin-bottom: 1rem;
-  background-color: var(--bs-background);
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  background-color: white;
+  border: 1px solid var(--bs-primary-75);
+  border-radius: 2rem;
 }
 .benefits .benefit-card .b-icon {
   width: 4rem;
@@ -191,6 +194,8 @@ section .section-action {
   padding: 1.5rem 2rem;
   margin-bottom: 1.5rem;
   background-color: var(--bs-black-5);
+  border: 1px solid var(--bs-primary-75);
+  border-radius: 2rem;
 }
 .how .how-card .b-icon {
   width: 4rem;
@@ -218,6 +223,49 @@ section .section-action {
   background-color: rgba(244, 64, 95, 0.1568627451);
 }
 .how .how-card:hover .card-title, .how .how-card.active .card-title {
+  color: var(--bs-primary);
+}
+
+.what .what-card {
+  border: 0;
+}
+.what .what-card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  background-color: white;
+  border: 1px solid var(--bs-primary-75);
+  border-radius: 2rem;
+}
+.what .what-card .b-icon {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 2rem;
+  border-color: gray;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--bs-primary);
+}
+.what .what-card .card-title {
+  font-size: medium;
+  font-weight: 800;
+  color: var(--bs-black-100);
+}
+.what .what-card:hover .card-body, .what .what-card.active .card-body {
+  background-color: var(--bs-primary-75);
+}
+.what .what-card:hover .b-icon, .what .what-card.active .b-icon {
+  border-color: var(--bs-primary);
+  color: var(--bs-primary);
+}
+.what .what-card:hover .card-title, .what .what-card.active .card-title {
   color: var(--bs-primary);
 }
 
