@@ -7,6 +7,7 @@
     scroll-behavior: smooth;
     --bs-font:'Heebo', sans-serif;
     --bs-primary:#F4405F;
+    --bs-primary-75:#F4405F40;
     --bs-background:#fcfafa;
     --bs-black-100:#0F0E0E;
     --bs-black-75:#0F0E0EC9;
@@ -180,10 +181,11 @@ section{
             flex-direction: column;
             align-items: center;
             text-align: center;
-            padding: 1rem 0rem;
-            margin-bottom: 1rem;
-            background-color: var(--bs-background);
-
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
+            background-color: white;
+            border: 1px solid var(--bs-primary-75);
+            border-radius: 2rem;
         }
     
         .b-icon{
@@ -239,7 +241,8 @@ section{
             padding: 1.5rem 2rem;
             margin-bottom: 1.5rem;
             background-color: var(--bs-black-5);
-            
+            border: 1px solid var(--bs-primary-75);
+            border-radius: 2rem;     
         }
     
         .b-icon{
@@ -270,6 +273,65 @@ section{
         &:hover, &.active{
             .b-icon{
                 background-color: #F4405F28;
+            }
+
+            .card-title{
+                color: var(--bs-primary);
+            }
+        }
+
+    }
+}
+
+.what{
+
+    .what-card{
+
+        border: 0;
+
+        .card-body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
+            background-color: white;
+            border: 1px solid var(--bs-primary-75);
+            border-radius: 2rem;
+        }
+    
+        .b-icon{
+            width: 4rem;
+            height: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid;
+            border-radius: 2rem;
+            border-color: gray;
+
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--bs-primary);
+        }
+
+        .card-title{
+            font-size: medium;
+            font-weight: 800;
+            color: var(--bs-black-100);
+        }
+
+
+        &:hover, &.active{
+
+            .card-body{
+                background-color: var(--bs-primary-75);
+            }
+
+            .b-icon{
+                border-color: var(--bs-primary);
+                color: var(--bs-primary);
             }
 
             .card-title{
